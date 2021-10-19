@@ -44,7 +44,30 @@ function sumNumbers(number) {
 const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(mixedArray) {
+  let sum = 0
+  for (let i = 0; i < mixedArray.length; i++){
+    if (typeof mixedArray[i] === "string") {
+      sum += mixedArray[i].length
+    }
+    else if (typeof mixedArray[i] === "boolean"){
+      if (mixedArray[i] === true){
+        sum += 1
+      }
+      else if (mixedArray[i] === false) {
+        sum = sum
+      }
+    }
+    else if (typeof mixedArray[i] === "number") {
+      sum += mixedArray[i]
+    }
+    else {
+      var e = new Error("Unsupported data type sir or ma'am");
+      throw e;
+    }
+  }
+  return sum
+}
 
 
 
@@ -85,7 +108,39 @@ function averageWordLength(words) {
 }
 
 // Bonus - Iteration #4.1
-function avg() {}
+
+function avg(mixedArray) {
+  if (mixedArray.length === 0) {
+    return null 
+  }
+
+  let sum = 0
+  for (let i = 0; i < mixedArray.length; i++){
+    if (typeof mixedArray[i] === "string") {
+      sum += mixedArray[i].length
+    }
+    else if (typeof mixedArray[i] === "boolean"){
+      if (mixedArray[i] === true){
+        sum += 1
+      }
+      else if (mixedArray[i] === false) {
+        sum = sum
+      }
+    }
+    else if (typeof mixedArray[i] === "number") {
+      sum += mixedArray[i]
+    }
+    else {
+      var e = new Error("Unsupported data type sir or ma'am");
+      throw e;
+    }
+  }
+
+  let average = sum / mixedArray.length
+  return parseFloat(average.toFixed(2))
+}
+
+
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
