@@ -138,6 +138,7 @@ function avg(mixedArray) {
 
   let average = sum / mixedArray.length
   return parseFloat(average.toFixed(2))
+  // can also just use +average.toFixed(2) or number(aver... )
 }
 
 
@@ -247,7 +248,15 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix){
+  let greatest = 0
+  for (let i = 0; i < matrix.length - 3; i++) {
+    for (let j = 0; j < matrix.length - 3; j++)
+  }
+
+
+
+}
 
 
 
